@@ -6,6 +6,7 @@ body{
 	background-image: -o-linear-gradient(302deg, #2c3e5f 0%, #3b78a7 100%);
 	background-image: linear-gradient(32deg, #2c3e5f 0%, #3b78a7 100%);
 	font-family: 'Open Sans', sans-serif;
+	margin:0 auto;
 }
 @textColor:#fefefe;
 @TextDarkColor:#2f4a6e;
@@ -78,6 +79,9 @@ h3{
 	height:100%;
 	padding-bottom: 9%;
 	border-right: 1px solid fade(@textColor, 20%);
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
 
 	.date-pick-slider{
 		width:80%;
@@ -87,17 +91,17 @@ h3{
 		border-radius: 20px;
 	}
 	.date-pick-slider-splice{
+		position: relative;
+  		top: -10px;
 		margin:0 auto;
 		width:80%;
 		height:10px;
 		background:url('../img/date-pick-slider-splice.png') no-repeat;
 		background-size: contain;
+		z-index: 1;
 	}
-	.date-pick-slider-value{
-		visibility: hidden;
-		width:40%;
+	.date-pick-slider-active{
 		height:100%;
-		margin: 21.5% auto 0% auto;
 		background-color:white;
 		border-radius: 20px;
 	}
@@ -106,30 +110,60 @@ h3{
   		height: 74px;
 		position: relative;
 		border: 1px solid @textColor;
+		-webkit-user-select: none; /* Chrome/Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+ */
+		z-index: 3;
 		border-radius: 2px;
 	}
 	#date-picker-1{
-		top: -964%;
+		top: -1206%;
 		left: 168px;
 	}
 	#date-picker-2{
-		top: -1735%;
+		top: -1971%;
 		left:336px;
 	}
 	.pointer{
 		position:relative;
 		left: 38%;
-		top:76%;
+		top:85%;
 		width:30px;
 		height:30px;
 		background:url(@PointerPath) no-repeat;
 		background-size: contain;
+		z-index: 2;
 	}
 	.date-pick-inner-text{
 		color:white;
 		text-align: center;
   		position: relative;
  		top: -34%;
+ 		z-index: 1;
 	}
 
+}
+
+.date-pick-menu{
+	width:19%;
+	float:left;
+	list-style: none;
+
+	.date-pick-menu-li{
+		margin-bottom: 20%;
+
+		.date-pick-menu-radio{
+  		    width: 20px;
+  		    height: 20px;
+  		    background:none;
+  			border: 1px solid @textColor;
+  			border-radius: 20px;
+  			margin-right: 20%;
+		}
+		label{
+			color:fade(@textColor, 40%);
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
 }

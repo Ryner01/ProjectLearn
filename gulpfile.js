@@ -22,4 +22,5 @@ gulp.task('js',function(){
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('./*.less', ['less']);
+  gulp.watch('./js/*.js',['js']);
 });	
