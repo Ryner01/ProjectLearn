@@ -20,6 +20,7 @@ $(document).ready(function(){
 		relX = e.pageX - srcX;
 		isClicking2 = true;
 	});
+	
 
 	$(document).mousemove(function(e){
 		sliderWidth = $('.date-pick-slider').width();
@@ -50,7 +51,6 @@ $(document).ready(function(){
 			var StartDate = new Date(new Date().getFullYear(), 0, daysStart);
 			var EndDate = new Date(new Date().getFullYear(), 0, daysEnd);
 
-			//inner-picker-text
 		};
 		
 		if (isClicking ) {
@@ -92,6 +92,7 @@ $(document).ready(function(){
 			if (diffX >= 483) {
 				$('#date-picker-2').css('left','483px');
 			};
+
 			//inner-picker-text-2
 			var d = EndDate;
 			var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
